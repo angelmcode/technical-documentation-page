@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Tooltip</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav id="navbar">
+    <header id="headernavbar">1</header>
+    <h4>JavaScript Tooltip</h4>
+    <ul>
+      <li>
+        <a href="#JavaScript_Variables" class="nav-link">JavaScript Variables</a>
+      </li>
+      <li>
+        <a href="#JavaScript_Conditionals" class="nav-link">JavaScript Conditionals</a>
+      </li>
+      <li>
+        <a href="#JavaScript_Loops" class="nav-link">JavaScript Loops</a>
+      </li>
+      <li>
+        <a href="#JavaScript_Arrays" class="nav-link">JavaScript Arrays</a>
+      </li>
+      <li>  
+        <a href="#JavaScript_Objects" class="nav-link">JavaScript Objects</a>
+      </li>
+      <li>  
+        <a href="#JavaScript_Functions" class="nav-link">JavaScript Functions</a>
+      </li>
+    </ul>
+    <h4>CSS Tooltip</h4>
+    <ul>
+      <li>
+        <a href="#CSS_Grid" class="nav-link">CSS Grid</a>
+      </li>
+      <li>
+        <a href="#CSS_Flexbox" class="nav-link">CSS Flexbox</a>
+      </li>
+      <li>
+        <a href="#CSS_Tooltip" class="nav-link">CSS Tooltip</a>
+      </li>
+      <li>
+        <a href="#CSS_Media_Query" class="nav-link">CSS Media Query</a>
+      </li>
+    </ul>
+    <h4>HTML Tooltip</h4>
+    <ul>
+      <li>
+        <a href="#HTML_Tamplate" class="nav-link">HTML Tamplate</a>
+      </li>
+    </ul>
+    <h4>Visual Studio Code Tooltip</h4>
+    <ul>
+      <li>
+        <a href="#Visual_Studio_Code_Shortcuts" class="nav-link">Visual Studio Code Shortcuts</a>
+      </li>
+    </ul>     
+  </nav>
+    
+  <main id="main-doc" class="container">
+    <section id="JavaScript_Variables" class="main-section">
+      <header>JavaScript Variables</header>
+      <article>
+        <p>Variables are similar to the x and y variables you use in mathematics, which means they're a simple name to represent the data we want to refer to. 
+          Computer variables can store different values at different times.</p>
+        <p>We tell JavaScript to create or declare a variable by putting the keyword var in front of it, like so:</p>
+        <code class="variables">var a = 1;</code>
+        <p>One of the biggest problems with declaring variables with the var keyword is that you can easily overwrite variable declarations. 
+          A keyword called let was introduced in ES6, a major update to JavaScript, to solve this potential issue with the var keyword.</p>
+        <code class="variables">let a = 1;</code>
+        <p>The keyword let is not the only new way to declare variables. In ES6, you can also declare variables using the const keyword.</p>
+        <p>const has all the awesome features that let has, with the added bonus that variables declared using const are read-only. 
+          They are a constant value, which means that once a variable is assigned with const, it cannot be reassigned.</p>
+        <code class="variables">const a = 1;</code>
+        <li></li>
+      </article>
+    </section>
+    <section id="JavaScript_Conditionals" class="main-section">
+      <header>JavaScript Conditionals</header>
+      <article>
+        <p>if statements are used to make decisions in code. The keyword if tells JavaScript to execute the code in the curly braces under certain conditions, defined in the parentheses. These conditions are known as Boolean conditions and they may only be true or false.</p>
+        <p>When the condition evaluates to true, the program executes the statement inside the curly braces. When the Boolean condition evaluates to false, the statement inside the curly braces will not execute.</p>
+        <pre>
+        <code>
+  if (myCondition) {
+    return console.log("It was true");
+  }
+  return console.log("It was false");
+        </code>
+        </pre> 
+        <p>When a condition for an if statement is true, the block of code following it is executed. What about when that condition is false? Normally nothing would happen. With an else statement, an alternate block of code can be executed.</p>
+        <pre>
+        <code>
+  if (num > 10) {
+    return "Bigger than 10";
+  } else {
+    return "10 or Less";
+  }
+        </code>
+        </pre>
+        <p>If you have multiple conditions that need to be addressed, you can chain if statements together with else if statements.</p>
+        <pre>
+        <code>
+  if (num > 15) {
+    return "Bigger than 15";
+  } else if (num < 5) {
+    return "Smaller than 5";
+  } else {
+    return "Between 5 and 15";
+  }
+        </code>
+        </pre>
+        <p>if/else statements can be chained together for complex logic. Here is pseudocode of multiple chained if / else if statements:</p>
+        <pre>
+        <code>
+  if (condition1) {
+    statement1
+  } else if (condition2) {
+    statement2
+  } else if (condition3) {
+    statement3
+  . . .
+  } else {
+    statementN
+  }
+        </code>
+        </pre>
+        <p>If you need to match one value against many options, you can use a switch statement. A switch statement compares the value to the case statements which define various possible values. Any valid JavaScript statements can be executed inside a case block and will run from the first matched case value until a break is encountered.</p>
+        <p>Here is an example of a switch statement:</p>
+        <pre>
+        <code>
+  switch (fruit) {
+    case "apple":
+      console.log("The fruit is an apple");
+      break;
+    case "orange":
+      console.log("The fruit is an orange");
+      break;
+  }
+        </code>
+        </pre>
+        <p>In a switch statement you may not be able to specify all possible values as case statements. Instead, you can add the default statement which will be executed if no matching case statements are found. Think of it like the final else statement in an if/else chain.</p>
+        <p>A default statement should be the last case.</p>
+        <pre>
+        <code>
+  switch (num) {
+    case value1:
+      statement1;
+      break;
+    case value2:
+      statement2;
+      break;
+  ...
+    default:
+      defaultStatement;
+      break;
+  }
+        </code>
+        </pre>
+        <li></li>
+      </article>
+    </section>
+    <section id="JavaScript_Loops" class="main-section">
+      <header>JavaScript Loops</header>
+      <article>
+        <p>You can run the same code multiple times by using a loop.</p>
+        <p>The first type of loop we will learn is called a while loop because it runs while a specified condition is true and stops once that condition is no longer true.</p>
+        <pre>
+        <code>
+  const ourArray = [];
+  let i = 0;
+  
+  while (i < 5) {
+    ourArray.push(i);
+    i++;
+  }
+        </code>
+        </pre>
+        <p>You can run the same code multiple times by using a loop. The most common type of JavaScript loop is called a for loop because it runs for a specific number of times.</p>
+        <p>For loops are declared with three optional expressions separated by semicolons: for (a; b; c), where a is the initialization statement, b is the condition statement, and c is the final expression.</p>
+        <pre>
+        <code>
+  const ourArray = [];
+
+  for (let i = 0; i < 5; i++) {
+    ourArray.push(i);
+  }
+        </code>
+        </pre>
+        <p>The next type of loop you will learn is called a do...while loop. It is called a do...while loop because it will first do one pass of the code inside the loop no matter what, and then continue to run the loop while the specified condition evaluates to true.</p>
+        <pre>
+        <code>
+  const ourArray = [];
+  let i = 0;
+  
+  do {
+    ourArray.push(i);
+    i++;
+  } while (i < 5);
+        </code>
+        </pre>
+        <p>Recursion is the concept that a function can be expressed in terms of itself. To help understand this, start by thinking about the following task: multiply the first n elements of an array to create the product of those elements. Using a for loop, you could do this:</p>
+        <pre>
+        <code>
+  function multiply(arr, n) {
+    let product = 1;
+    for (let i = 0; i < n; i++) {
+      product *= arr[i];
+    }
+    return product;
+  }
+        </code>
+        </pre>
+        <p>However, notice that multiply(arr, n) == multiply(arr, n - 1) * arr[n - 1]. That means you can rewrite multiply in terms of itself and never need to use a loop.</p>
+        <pre>
+        <code>
+  function multiply(arr, n) {
+    if (n <= 0) {
+      return 1;
+    } else {
+      return multiply(arr, n - 1) * arr[n - 1];
+    }
+  }
+        </code>
+        </pre>
+        <p>The recursive version of multiply breaks down like this. In the base case, where n <= 0, it returns 1. For larger values of n, it calls itself, but with n - 1. That function call is evaluated in the same way, calling multiply again until n <= 0. At this point, all the functions can return and the original multiply returns the answer.</p>
+        <p>The conditional operator, also called the ternary operator, can be used as a one line if-else expression. 
+          The syntax is a ? b : c, where a is the condition, b is the code to run when the condition returns true, and c is the code to run when the condition returns false. 
+          The following function uses an if/else statement to check a condition:</p>
+          <pre>
+          <code>
+  function findGreater(a, b) {
+    if(a > b) {
+      return "a is greater";
+    }
+    else {
+      return "b is greater or equal";
+    }
+  }
+        </code>
+        </pre>
+        <p>This can be re-written using the conditional operator:</p>
+        <pre>
+        <code>
+  function findGreater(a, b) {
+    return a > b ? "a is greater" 
+    : "b is greater or equal";
+  }
+        </code>
+        </pre>
+        <li></li>
+      </article>
+    </section>
+    <section id="JavaScript_Arrays" class="main-section">
+      <header>JavaScript Arrays</header>
+      <article>
+        <p>With JavaScript array variables, we can store several pieces of data in one place.</p>
+        <p>You start an array declaration with an opening square bracket, end it with a closing square bracket, and put a comma between each entry, like this:</p>
+        <code>
+    const sandwich = ["peanut butter", 
+    "jelly", 
+    "bread"];
+        </code>
+        <li></li>
+      </article>
+    </section>
+    <section id="JavaScript_Objects" class="main-section">
+      <header>JavaScript Objects</header>
+      <article>
+        <p>You may have heard the term object before. Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties.</p>
+        <p>Objects are useful for storing data in a structured way, and can represent real world objects, like a cat. Here's a sample cat object:</p>
+        <pre>
+        <code>
+  const cat = {
+    "name": "Whiskers",
+    "legs": 4,
+    "tails": 1,
+    "enemies": ["Water", "Dogs"]
+  };
+        </code>
+        </pre>
+        <li></li>
+      </article>
+    </section>
+    <section id="JavaScript_Functions" class="main-section">
+      <header>JavaScript Functions</header>
+      <article>
+        <p>In JavaScript, we can divide up our code into reusable parts called functions. Here's an example of a function:</p>
+        <pre>
+        <code>
+  function functionName() {
+    console.log("Hello World");
+  }
+        </code>
+        </pre>
+        <p>You can call or invoke this function by using its name followed by parentheses, like this: functionName(); Each time the function is called it will print out the message Hello World on the dev console. All of the code between the curly braces will be executed every time the function is called.</p>
+        <p>Parameters are variables that act as placeholders for the values that are to be input to a function when it is called. When a function is defined, it is typically defined along with one or more parameters. The actual values that are input (or "passed") into a function when it is called are known as arguments. 
+          Here is a function with two parameters, param1 and param2:</p>
+        <pre>
+        <code>
+  function testFun(param1, param2) {
+    console.log(param1, param2);
+  }
+        </code>
+        </pre>
+        <p>Then we can call testFun like this: testFun("Hello", "World");. We have passed two string arguments, Hello and World. Inside the function, param1 will equal the string Hello and param2 will equal the string World. Note that you could call testFun again with different arguments and the parameters would take on the value of the new arguments.</p>
+        <li></li>
+      </article>
+    </section>
+    <section id="CSS_Grid" class="main-section">
+      <header>CSS Grid</header>
+      <article>
+        <p>CSS Grid Layout is a two-dimensional grid-based layout system that allows web developers to create complex and responsive layouts with ease. It is a powerful tool that can be used to create a wide variety of layouts, from simple grids to complex and dynamic layouts.</p>
+        <p>To use CSS Grid Layout, you first need to define a container element as a grid. This can be done by setting the display property of the container element to grid. Once the container element is a grid, you can then define the columns and rows of the grid. This can be done using the grid-template-columns and grid-template-rows properties.</p>
+        <pre>
+        <code>
+  body {
+    display: grid;
+    grid-template-columns: 25% 75%;
+  }
+
+  div {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+        </code>
+        </pre>
+        <li></li>
+      </article>
+    </section>
+    <section id="CSS_Flexbox" class="main-section">
+      <header>CSS Flexbox</header>
+      <article>
+        <p>CSS Flexbox, or Flexible Box Layout, is a CSS layout method that allows you to easily create flexible and responsive layouts. It is a one-dimensional layout model, which means that it can be used to lay out items in a row or column.</p>
+        <p>To use Flexbox, you first need to define a container element as a flex container. This can be done by setting the display property of the container element to flex or inline-flex. Once the container element is a flex container, you can then define the flex direction. The flex direction can be set to row or column.</p>
+        <pre>
+        <code>
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+        </code>
+        </pre>
+        <li></li>
+      </article>
+    </section>
+    <section id="CSS_Tooltip" class="main-section">
+      <header>CSS Tooltip</header>
+      <article>
+        <p>A CSS tooltip is a small piece of text that appears when the user hovers over an element on a web page. Tooltips can be used to provide additional information about an element, such as its purpose or function.</p>
+        <p>The following CSS code will create a tooltip that appears when the user hovers over an element</p>
+        <pre>
+        <code>
+  #css {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  #css-tooltip {
+    display: none;
+    position: absolute;
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    text-align: center;
+    width: 200px;
+  }
+  
+  #css:hover #css-tooltip {
+    display: inline-block;
+  }
+        </code>
+        </pre>
+        <li></li>
+      </article>
+    </section>
+    <section id="CSS_Media_Query" class="main-section">
+      <header>CSS Media Query</header>
+      <article>
+        <p>A CSS media query is a rule that allows you to specify different CSS styles for different media types or devices. For example, you could use a media query to apply different styles to a website on a mobile device than you would on a desktop computer.</p>
+        <p>For example, the following media query would apply the styles inside the curly braces to all devices with a screen width of less than 598 pixels:</p>
+        <pre>
+        <code>
+  @media (max-width: 598px) {
+    body {
+      grid-template-columns: 1% 98% 1%;
+    }
+  }
+        </code>
+        </pre>
+        <li></li>
+      </article>
+    </section>
+    <section id="HTML_Tamplate" class="main-section">
+      <header>HTML Tamplate</header>
+      <article>
+        <p>An HTML template is a pre-made HTML document that can be used to create a new HTML document quickly and easily.</p>
+        <p></p>
+        <pre>
+        <code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" 
+    content="width=device-width, 
+    initial-scale=1.0"&gt;
+    &lt;title&gt;JavaScript Tooltip&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+  &lt;html&gt;
+        </code>
+        </pre>
+        <li></li>
+      </article>
+    </section>
+    <section id="Visual_Studio_Code_Shortcuts" class="main-section">
+      <header>Visual Studio Code Shortcuts</header>
+      <article>
+        <p>VS Code has a wide range of keyboard shortcuts that can be used to perform common tasks quickly and easily.</p>
+        <p>Here are some of the most common VS Code keyboard shortcuts:</p>
+        <code></code>
+        <li>Shift + Alt + F: Ordena el codigo.</li>
+        <li>Tab: Ident a line of code.</li>
+        <li>Ctrl + A: Select all text in the editor.</li>
+        <li>Ctrl + Z: Undo an action.</li>
+        <li>Ctrl + Y: Redo an action.</li>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

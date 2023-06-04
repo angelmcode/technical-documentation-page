@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  color: white;
+  /* font-family: Arial; */
+}
+
+body {
+  background: #0f0f25;
+  /* border: 1px solid black; */
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 28%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-right: solid;
+  border-color: white;
+  background-color: #0f0f25;
+  z-index: 100;
+  text-align: center;
+}
+
+#headernavbar {
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px;
+}
+
+header {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 24px;
+}
+
+h4 {
+  /* border: 1px solid black; */
+  font-size: 24px;
+  margin-top: 28px;
+}
+
+/* li {
+  border: 1px solid black;
+} */
+
+main {
+  position: absolute;
+  /* border: 1px solid black; */
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 29%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 200px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.variables {
+  background-color: #161636;
+}
+
+pre {
+  background-color: #161636;
+  border: 1px solid white;
+  padding-top: 10px;
+}
+
+/* code {
+  border: 1px solid white;
+} */
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px;
+  text-align: left;
+  padding: 0;
+  /* border: 1px solid white; */
+  text-align: center;
+  gap: 20px;
+  margin-top: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+li {
+  list-style-type: none;
+  /* border: 1px solid white; */
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 804px) {
+  #navbar {
+    /* border: 1px solid black; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 210px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-bottom: solid;
+    border-color: white;
+    background-color: #0f0f25;
+    z-index: 100;
+  }
+
+  header {
+    padding-top: 224px;
+    padding-bottom: 10px;
+    font-size: 24px;
+  }
+
+  main {
+    position: absolute;
+    /* border: 1px solid black; */
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0;
+    margin-top: 154px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 100px;
+  }
+}
